@@ -1,0 +1,61 @@
+---
+layout: default
+---
+<div style="padding: 32px 0 0;">
+  <a href="{{ '/herbarium/' | relative_url }}" class="back" style="margin: 0;">← The Herbarium</a>
+</div>
+
+<section class="herb-hero" style="padding: 40px 0 48px;">
+  <div class="tags"><p class="primary">{{ page.tag }}</p></div>
+  <h1>{{ page.name }}</h1>
+  <p class="latin">{{ page.latin }}</p>
+</section>
+
+<section style="padding-bottom: 56px;">
+  {% if page.image and page.image != '' %}
+    <img src="{{ page.image | relative_url }}" alt="" style="aspect-ratio:21/9;object-fit:cover;border-radius:3px;" />
+  {% else %}
+    {% capture hero_caption %}hero — {{ page.name }}{% endcapture %}
+    {% include placeholder.html caption=hero_caption ratio="21/9" extra="padding:20px;" %}
+  {% endif %}
+</section>
+
+<section class="detail-cols" style="padding-bottom: 72px;">
+  <div class="prose">
+    {{ content }}
+  </div>
+  <aside class="aside">
+    <div class="facts">
+      <h3>Quick facts</h3>
+      {% for f in page.facts %}
+        <div class="fact-row"><span class="k">{{ f.k }}</span><span class="v">{{ f.v }}</span></div>
+      {% endfor %}
+    </div>
+    <div class="goodfor">
+      <h3>Good for</h3>
+      <p>{{ page.good_for }}</p>
+    </div>
+  </aside>
+</section>
+
+{% assign others = site.herbs | where_exp: "h", "h.url != page.url" | slice: 0, 3 %}
+{% if others.size > 0 %}
+<section style="border-top: 1px solid var(--line); padding: 48px 0 88px;">
+  <h2 class="section-label">More from the shelf</h2>
+  <div class="related-herbs">
+    {% for h in others %}
+      <a href="{{ h.url | relative_url }}" class="herb-card">
+        {% if h.image and h.image != '' %}
+          <img src="{{ h.image | relative_url }}" alt="" class="thumb" style="aspect-ratio:4/3;object-fit:cover;" />
+        {% else %}
+          <div class="thumb"></div>
+        {% endif %}
+        <div class="body">
+          <span class="name">{{ h.name }}</span>
+          <span class="latin">{{ h.latin }}</span>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

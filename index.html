@@ -1,0 +1,63 @@
+---
+layout: default
+nav: journal
+title: Niksen
+---
+{% assign featured = site.posts | where: "featured", true | first %}
+{% unless featured %}{% assign featured = site.posts | first %}{% endunless %}
+{% assign rest = site.posts | where_exp: "p", "p.url != featured.url" %}
+
+<section class="hero">
+  <p class="eyebrow">{{ site.tagline }}</p>
+  <h1>Fewer things, tended well. Notes on minimalism, herbs, and the present moment.</h1>
+  <p class="lede">{{ site.description }}</p>
+</section>
+
+<section style="padding-bottom: 72px;">
+  <h2 class="section-label" style="margin-bottom: 32px;">Latest</h2>
+  <a class="featured" href="{{ featured.url | relative_url }}">
+    <div>
+      <p class="kicker">{{ featured.topic }}</p>
+      <h3>{{ featured.title }}</h3>
+      <p>{{ featured.excerpt }}</p>
+      <p class="meta">{{ featured.date | date: '%-d %B %Y' }} &nbsp;·&nbsp; {{ featured.reading_time }}</p>
+    </div>
+    {% if featured.image and featured.image != '' %}
+      <img src="{{ featured.image | relative_url }}" alt="" style="aspect-ratio:4/5;object-fit:cover;border-radius:2px;" />
+    {% else %}
+      {% include placeholder.html caption="featured photo" ratio="4/5" %}
+    {% endif %}
+  </a>
+</section>
+
+<section style="padding-bottom: 88px; border-top: 1px solid var(--line); padding-top: 8px;">
+  {% for p in rest %}
+    <a href="{{ p.url | relative_url }}" class="post-row">
+      <span class="topic">{{ p.topic }}</span>
+      <span>
+        <span class="title">{{ p.title }}</span>
+        <span class="excerpt">{{ p.excerpt }}</span>
+      </span>
+      <span class="date">{{ p.date | date: '%-d %b' }}</span>
+    </a>
+  {% endfor %}
+</section>
+
+<section class="two-col" style="padding: 8px 0 88px;">
+  <div>
+    <h2 class="section-label">Wander by topic</h2>
+    {% assign topics = site.posts | group_by: "topic" %}
+    {% for t in topics %}
+      <a href="{{ '/' | relative_url }}" class="topic-row">
+        <span class="name">{{ t.name }}</span>
+        <span class="count">{{ t.size }} {% if t.size == 1 %}note{% else %}notes{% endif %}</span>
+      </a>
+    {% endfor %}
+  </div>
+  <div>
+    <h2 class="section-label">Who's writing</h2>
+    <div class="ph round" style="width: 72px; height: 72px; margin-bottom: 24px;"></div>
+    <p class="author-p">I work in tech, and for years I moved at its speed. I write here about finding my way back to a slower one — owning less, brewing my own tea, and the quiet practice of staying present.</p>
+    <a href="{{ '/about/' | relative_url }}" style="font-size: 15px;">More about this place &nbsp;→</a>
+  </div>
+</section>

@@ -1,0 +1,49 @@
+---
+layout: default
+---
+<article class="article">
+  <a href="{{ '/' | relative_url }}" class="back">← Back to journal</a>
+  <p class="eyebrow accent" style="margin-bottom:22px;">{{ page.topic }}</p>
+  <h1>{{ page.title }}</h1>
+  <p class="standfirst">{{ page.excerpt }}</p>
+
+  <div class="byline">
+    <span class="sub">{{ page.date | date: '%-d %B %Y' }} · {{ page.reading_time }}</span>
+  </div>
+
+  {% if page.image and page.image != '' %}
+    <img src="{{ page.image | relative_url }}" alt="" style="aspect-ratio:16/9;object-fit:cover;border-radius:2px;margin-bottom:56px;" />
+  {% else %}
+    {% include placeholder.html caption="lead photo" ratio="16/9" extra="padding:18px;margin-bottom:56px;" %}
+  {% endif %}
+
+  <div class="prose">
+    {{ content }}
+  </div>
+</article>
+
+<section class="narrow" style="padding: 40px 0 24px; border-top: 1px solid var(--line);">
+  <div style="display: flex; align-items: center; gap: 20px;">
+    <div class="ph round" style="width: 64px; height: 64px; flex-shrink: 0;"></div>
+    <div>
+      <p class="eyebrow" style="margin: 0 0 6px;">Written by</p>
+      <p style="font-size: 16px; line-height: 1.55; color: #3a3a36; margin: 0;">Someone who spent a long time working in tech and is learning, slowly, how to live at a gentler pace. Writing about owning less, healing inward, and paying attention.</p>
+    </div>
+  </div>
+</section>
+
+{% assign others = site.posts | where_exp: "p", "p.url != page.url" | slice: 0, 2 %}
+{% if others.size > 0 %}
+<section style="padding: 64px 0 88px;">
+  <h2 class="section-label">Keep reading</h2>
+  <div class="related-grid">
+    {% for p in others %}
+      <a href="{{ p.url | relative_url }}">
+        <p class="topic">{{ p.topic }}</p>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.excerpt }}</p>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

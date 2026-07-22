@@ -1,0 +1,39 @@
+---
+layout: default
+nav: herbarium
+title: The Herbarium
+permalink: /herbarium/
+footer_style: "margin-top: 48px;"
+---
+<section class="hero" style="max-width: 760px;">
+  <p class="eyebrow">The Herbarium</p>
+  <h1 style="font-size: 46px; line-height: 1.14;">A growing shelf of forgiving plants.</h1>
+  <p class="lede" style="max-width: 560px;">Field entries for the herbs I keep on the windowsill — what they like, what they're good for, and how to brew them. Written for the plant-killers among us.</p>
+</section>
+
+<section style="padding-bottom: 40px;">
+  {% assign tags = site.herbs | map: "tag" | uniq | sort %}
+  <div class="filters">
+    <span class="chip active" data-filter="all">All</span>
+    {% for t in tags %}
+      <span class="chip" data-filter="{{ t }}">{{ t }}</span>
+    {% endfor %}
+  </div>
+
+  <div class="herb-grid">
+    {% for h in site.herbs %}
+      <a href="{{ h.url | relative_url }}" class="herb-card" data-tag="{{ h.tag }}">
+        {% if h.image and h.image != '' %}
+          <img src="{{ h.image | relative_url }}" alt="" class="thumb" style="aspect-ratio:4/3;object-fit:cover;" />
+        {% else %}
+          <div class="thumb"><span class="cap">{{ h.photo }}</span></div>
+        {% endif %}
+        <div class="body">
+          <div class="head"><span class="name">{{ h.name }}</span><span class="tag">{{ h.tag }}</span></div>
+          <p class="latin">{{ h.latin }}</p>
+          <p class="note">{{ h.note }}</p>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>

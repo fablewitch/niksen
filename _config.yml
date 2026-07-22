@@ -1,0 +1,46 @@
+title: Niksen
+tagline: A quiet blog on living slowly
+description: >-
+  An unhurried journal about keeping less, growing green things on the
+  windowsill, and paying attention to the days as they pass.
+lang: en
+
+url: "https://niksenday.com"
+baseurl: ""
+
+permalink: /:title/
+
+collections:
+  herbs:
+    output: true
+    permalink: /herbarium/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      nav: journal
+  - scope:
+      path: ""
+      type: herbs
+    values:
+      layout: herb
+      nav: herbarium
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+feed:
+  path: feed.xml
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md

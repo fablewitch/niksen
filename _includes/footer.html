@@ -1,0 +1,8 @@
+<footer class="site-footer"{% if include.style %} style="{{ include.style }}"{% endif %}>
+  <span>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</span>
+  <span class="links">
+    <a href="#">Instagram</a>
+    <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+    <a href="#">Newsletter</a>
+  </span>
+</footer>

@@ -16,7 +16,7 @@ layout: default
     <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.name }}" class="plate" />
     {% if page.image_credit %}<p class="cap" style="margin: 10px 0 0; font-size: 13px; color: var(--muted);">{{ page.image_credit }}</p>{% endif %}
   {% else %}
-    {% capture hero_caption %}hero — {{ page.name }}{% endcapture %}
+    {% capture hero_caption %}hero, {{ page.name }}{% endcapture %}
     {% include placeholder.html caption=hero_caption ratio="21/9" extra="padding:20px;" %}
   {% endif %}
 </section>

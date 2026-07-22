@@ -13,7 +13,8 @@ layout: default
 
 <section style="padding-bottom: 56px;">
   {% if page.image and page.image != '' %}
-    <img src="{{ page.image | relative_url }}" alt="" style="aspect-ratio:21/9;object-fit:cover;border-radius:3px;" />
+    <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.name }}" class="plate" />
+    {% if page.image_credit %}<p class="cap" style="margin: 10px 0 0; font-size: 13px; color: var(--muted);">{{ page.image_credit }}</p>{% endif %}
   {% else %}
     {% capture hero_caption %}hero — {{ page.name }}{% endcapture %}
     {% include placeholder.html caption=hero_caption ratio="21/9" extra="padding:20px;" %}
@@ -46,7 +47,7 @@ layout: default
     {% for h in others %}
       <a href="{{ h.url | relative_url }}" class="herb-card">
         {% if h.image and h.image != '' %}
-          <img src="{{ h.image | relative_url }}" alt="" class="thumb" style="aspect-ratio:4/3;object-fit:cover;" />
+          <img src="{{ h.image | relative_url }}" alt="" class="thumb plate" />
         {% else %}
           <div class="thumb"></div>
         {% endif %}

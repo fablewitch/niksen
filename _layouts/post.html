@@ -12,7 +12,8 @@ layout: default
   </div>
 
   {% if page.image and page.image != '' %}
-    <img src="{{ page.image | relative_url }}" alt="" style="aspect-ratio:16/9;object-fit:cover;border-radius:2px;margin-bottom:56px;" />
+    <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}" style="aspect-ratio:16/9;object-fit:cover;border-radius:2px;{% unless page.image_credit %}margin-bottom:56px;{% endunless %}" />
+    {% if page.image_credit %}<p class="cap" style="margin: 10px 0 56px; font-size: 13px; color: var(--muted);">{{ page.image_credit }}</p>{% endif %}
   {% else %}
     {% include placeholder.html caption="lead photo" ratio="16/9" extra="padding:18px;margin-bottom:56px;" %}
   {% endif %}

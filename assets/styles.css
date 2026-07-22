@@ -19,6 +19,26 @@
   --card: #fffefa;
 }
 
+/* Botanical plates are tall and printed on cream paper. Rather than cropping
+   them to a banner, sit the whole plate on a paper-toned mount. */
+.plate {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-height: 640px;
+  object-fit: contain;
+  background: #f6f2e4;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 20px;
+}
+.herb-card .thumb.plate {
+  aspect-ratio: 4 / 3;
+  max-height: none;
+  padding: 10px;
+  border-radius: 2px;
+}
+
 * { box-sizing: border-box; }
 
 body {

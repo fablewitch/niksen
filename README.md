@@ -41,6 +41,8 @@ date: 2026-07-14
 reading_time: "6 min read"
 featured: false             # true pins it to the top of the home page
 image: ""                   # empty renders a placeholder block
+image_alt: ""               # describe the photo; required whenever image is set
+image_credit: ""            # source line shown under the image
 excerpt: "One or two sentences — used on the home page and in the RSS feed."
 ---
 
@@ -48,7 +50,8 @@ Body in Markdown.
 ```
 
 Add a herb as `_herbs/slug.md` with `name`, `latin`, `tag`, `photo`, `image`,
-`note`, `good_for`, and a `facts` list of `k`/`v` pairs.
+`image_alt`, `image_credit`, `note`, `good_for`, and a `facts` list of `k`/`v`
+pairs.
 
 Topics and herbarium filter chips are derived from the content — no list to
 keep in sync.

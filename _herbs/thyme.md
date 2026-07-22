@@ -29,4 +29,4 @@ Give it sun and gritty, well-drained soil, then mostly leave it alone. Overwater
 
 ## Brewing a cup
 
-A sprig or two steeped for a few minutes makes a warming, savoury tea — good with honey when a cold is circling.
+A sprig or two steeped for a few minutes makes a warming, savoury tea, good with honey when a cold is circling.

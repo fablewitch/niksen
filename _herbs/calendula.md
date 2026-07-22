@@ -7,7 +7,7 @@ photo: "calendula flower"
 image: "/assets/images/calendula.jpg"
 image_alt: "Hand-coloured botanical plate of calendula, showing an orange daisy-like flower above broad soft green leaves"
 image_credit: "Plate from Flore médicale, Paris, 1833–1835. Biodiversity Heritage Library, no known copyright restrictions."
-note: "Cheerful orange petals that dry beautifully — for skin-soothing infusions and golden teas."
+note: "Cheerful orange petals that dry beautifully, for skin-soothing infusions and golden teas."
 good_for: "Skin-soothing infusions and a cheerful golden tea."
 facts:
   - k: "Light"
@@ -25,7 +25,7 @@ Cheerful orange flowers that dry beautifully and self-seed happily around the ga
 
 ## Growing it
 
-Easy from seed in a sunny spot. Deadhead often and it will bloom until the frosts.
+Easy from seed in a sunny spot. Pinch off the spent flowers often and it will bloom until the frosts.
 
 ## Brewing a cup
 

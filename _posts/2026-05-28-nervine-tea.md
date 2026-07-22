@@ -9,8 +9,8 @@ image_alt: "A stoneware cup of pale herbal tea beside a white ceramic teapot on 
 image_credit: "Photo by Content Pixie on Unsplash."
 excerpt: "A simple three-herb blend and the ritual of steeping it slowly, timed by nothing but the kettle."
 ---
-Three herbs, a covered pot, and five unhurried minutes.
+A nervine is simply a herb that settles the nervous system, and this blend leans on three of them, steeped in a covered pot for five unhurried minutes.
 
 ## The blend
 
-Chamomile for softness, lemon balm for lift, a little lavender for quiet. Cover while it steeps so the calming oils stay in the cup.
+Chamomile does most of the work here, lemon balm brightens it, and a little lavender settles the whole thing down, though the lavender wants a light hand because too much of it turns the cup soapy. Cover the pot while it steeps so the calming oils stay in the tea instead of drifting off in the steam.

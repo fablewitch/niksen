@@ -21,11 +21,11 @@ facts:
   - k: "Use"
     v: "Dried flowers"
 ---
-If one plant taught me patience, it was this one. Chamomile asks for almost nothing — a sunny sill, the occasional drink of water — and returns small daisy-like flowers that smell faintly of apples when you brush past them.
+If one plant taught me patience, it was this one. Chamomile asks for almost nothing beyond a sunny sill and the occasional drink of water, and returns small daisy-like flowers that smell faintly of apples when you brush past them.
 
 ## Growing it
 
-Sow the fine seeds on the surface of the soil and press them in gently — they need light to germinate. Keep them in the brightest spot you have and let the top of the soil dry between waterings. It's a plant that prefers a little neglect to too much fuss.
+Sow the fine seeds on the surface of the soil and press them in gently, since they need light to germinate. Keep them in the brightest spot you have and let the top of the soil dry between waterings. It's a plant that prefers a little neglect to too much fuss.
 
 ## Harvest & drying
 
@@ -33,9 +33,9 @@ Pick the flowers when the white petals are still flat, not yet curled back. Lay 
 
 ## Brewing a cup
 
-Use a heaped tablespoon of dried flowers per mug. Pour over just-off-the-boil water, cover, and steep for five minutes — covering it keeps the calming oils from drifting off in the steam. Strain, and drink it slowly, ideally with nowhere else to be.
+Use a heaped tablespoon of dried flowers per mug. Pour over just-off-the-boil water, cover, and steep for five minutes, since covering it keeps the calming oils from drifting off in the steam. Strain, and drink it slowly, ideally with nowhere else to be.
 
-> A cup of chamomile is less a remedy than a signal — a small ceremony that tells the body the day is done.
+> A cup of chamomile works mostly as a signal, a small ceremony that tells the body the day is done.
 
 ## A note of caution
 

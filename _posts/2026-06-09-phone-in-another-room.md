@@ -7,10 +7,10 @@ featured: false
 image: "/assets/images/phone-in-another-room.jpg"
 image_alt: "An old cloth-bound book lying open on a wooden bedside table beside a lit lamp"
 image_credit: "Photo by Clay Banks on Unsplash."
-excerpt: "Small frictions, big returns. A month of keeping the device out of arm's reach after dark."
+excerpt: "A month of keeping the phone out of arm's reach after dark, and what that small bit of distance changed."
 ---
-A month of one small friction: after dark, the phone lives in the kitchen, not the bedroom.
+For a month I kept one small friction in place: after dark, the phone lives in the kitchen rather than the bedroom.
 
-## Small frictions, big returns
+## What the distance does
 
-The distance is only a few metres, but it is enough. Enough to make reaching for it a decision rather than a reflex.
+The walk is only a few metres, but it is enough to turn reaching for the phone into a decision I have to make rather than a reflex I follow without noticing.

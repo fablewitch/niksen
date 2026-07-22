@@ -21,7 +21,7 @@ facts:
   - k: "Use"
     v: "Fresh or dried leaves"
 ---
-Nearly impossible to kill, and just as hard to contain — grow it in a pot unless you want it everywhere.
+Nearly impossible to kill, and just as hard to contain, so grow it in a pot unless you want it everywhere.
 
 ## Growing it
 

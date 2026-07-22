@@ -4,7 +4,9 @@ topic: "Living in the moment"
 date: 2026-07-14
 reading_time: "6 min read"
 featured: true
-image: ""
+image: "/assets/images/doing-one-thing.jpg"
+image_alt: "A blank spiral notebook and a pen on a wooden table in soft window light"
+image_credit: "Photo by Kelly Sikkema on Unsplash."
 excerpt: "What happens to your attention when you stop stacking tasks and let each hour hold a single purpose. Seven small experiments in presence."
 ---
 The list had become a kind of weather I lived under. Every morning I woke beneath its low ceiling of eleven or twelve items, and every night I went to sleep having moved perhaps three of them, the rest rolling forward into tomorrow like debt. So one Sunday I closed the app and decided to try a different arrangement: one thing a day, chosen the night before, and nothing else written down.

@@ -17,6 +17,8 @@ industry.
   <113906533+fablewitch@users.noreply.github.com>`. This is already set in the
   repo-local git config — don't override it, and don't fall back to the global
   identity.
+- **Never add `Co-Authored-By: Claude` or any similar tool/assistant trailer to
+  a commit message.** No AI attribution anywhere in this repo's history.
 - `git push` uses SSH and is pinned in `~/.ssh/config` to the fablewitch key.
   If a push ever authenticates as another GitHub account, stop and fix the key
   before pushing.
@@ -102,6 +104,46 @@ Images take three front-matter fields on both herbs and posts: `image`,
 under the image — that per-image line is the only attribution the site carries,
 so fill it in every time. Post lead images still use `16/9` with
 `object-fit: cover`; only herb plates get the paper mount.
+
+## Photographs
+
+For anything that isn't a botanical plate, use **Unsplash**
+(https://unsplash.com/). Two hard rules:
+
+- **Free licence only.** Skip anything badged **Unsplash+** or **Plus** — that
+  is a separate paid licence, not the free Unsplash License. The search results
+  mark them; check before downloading.
+- **Credit the photographer** in `image_credit`, as "Photo by NAME on
+  Unsplash." Attribution isn't strictly required by the Unsplash License, but
+  the site credits every image. Naming a photographer does not conflict with
+  the anonymity rules above — those are about the site's own author.
+
+Unsplash blocks scripted page fetches with an anti-bot challenge, so `curl` on
+a photo page returns a "Making sure you're not a bot!" stub. Fetch the page with
+the WebFetch tool to read the direct `images.unsplash.com/photo-…` URL, then
+download that URL with `curl` — the image CDN itself is not gated.
+
+### Colour — always check a photo against the palette
+
+**Pick photos that already sit in the site's range**: warm cream, oatmeal,
+linen, terracotta, honeyed wood, sage and olive green, soft natural light,
+low-to-medium saturation. The reference points are `--bg: #fdfcf8` and the
+plates' `#f6f2e4` paper.
+
+Reject, don't try to fix:
+- cool blue-grey or stark white light
+- saturated primaries (blue and teal book spines, bright plastics)
+- heavy contrast or deep shadow — the site has no black anywhere
+- anything glossy, staged, or stock-lit
+
+The `.photo` class applies `saturate(0.9) sepia(0.07) contrast(0.98)` to settle
+a photo into the palette. It is a nudge for something already close. It cannot
+warm a cold photo, and turning it up far enough to try makes everything look
+muddy and sepia-toned — if a photo needs that, pick a different photo.
+
+Crop to `16/9` around the subject before committing the file, rather than
+relying on `object-fit: cover` to find it — most candidates are portrait, and
+cover would centre on empty wall.
 
 ### Attribution
 

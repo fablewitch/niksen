@@ -19,6 +19,12 @@
   --card: #fffefa;
 }
 
+/* Photographs are picked to sit in the site's warm cream/sage range; this is a
+   final nudge to settle a photo into it, not a rescue for a cold one. */
+.photo {
+  filter: saturate(0.9) sepia(0.07) contrast(0.98);
+}
+
 /* Botanical plates are tall and printed on cream paper. Rather than cropping
    them to a banner, sit the whole plate on a paper-toned mount. */
 .plate {

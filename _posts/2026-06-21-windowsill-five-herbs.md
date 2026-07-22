@@ -4,7 +4,9 @@ topic: "Herbalism"
 date: 2026-06-21
 reading_time: "7 min read"
 featured: false
-image: ""
+image: "/assets/images/windowsill-five-herbs.jpg"
+image_alt: "A row of small potted plants along a sunlit windowsill in an old painted window frame"
+image_credit: "Photo by Kyle Austin on Unsplash."
 excerpt: "Mint, thyme, chamomile, lemon balm, and calendula — hardy companions for anyone who has killed a plant before."
 ---
 If you have killed a plant — and who hasn't — start here. These five ask for little and forgive much.
